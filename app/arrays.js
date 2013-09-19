@@ -30,7 +30,11 @@ define(function() {
     },
 
     removeWithoutCopy : function(arr, item) {
+        var orig = arr;
 
+        this.remove(arr, item);
+
+        return orig;
     },
 
     append : function(arr, item) {

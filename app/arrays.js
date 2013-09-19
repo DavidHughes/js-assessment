@@ -68,7 +68,13 @@ define(function() {
     },
 
     insert : function(arr, item, index) {
+        var head = arr.slice(0, index);
+        var tail = arr.slice(index, arr.length);
 
+        head = this.append(head, item);
+        var arrWithItem = this.concat(head, tail);
+
+        return arrWithItem;
     },
 
     count : function(arr, item) {

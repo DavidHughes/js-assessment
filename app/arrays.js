@@ -85,7 +85,22 @@ define(function() {
     },
 
     duplicates : function(arr) {
+        var arrDuplicates = [];
 
+        /*
+            loop through elements
+                if the array has more than one occurrence and is not in duplicates list
+                    add to duplicates
+        */
+
+        for (var i = arr.length - 1; i >= 0; i--) {
+            console.log(arr[i] + ' appears ' + this.count(arr[i]) + ' times.');
+            if (this.count(arr[i]) > 1 && this.indexOf(arrDuplicates, arr[i]) !== -1) {
+                arrDuplicates = arrDuplicates.append(arr[i]);
+            }
+        }
+
+        return arrDuplicates;
     },
 
     square : function(arr) {

@@ -78,7 +78,10 @@ define(function() {
     },
 
     count : function(arr, item) {
+        var total = arr.length;
+        var withoutItem = this.remove(arr, item).length;
 
+        return total - withoutItem;
     },
 
     duplicates : function(arr) {

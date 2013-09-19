@@ -101,7 +101,13 @@ define(function() {
     },
 
     square : function(arr) {
+        var squares = arr;
 
+        for (var i = arr.length - 1; i >= 0; i--) {
+            squares[i] = arr[i] * arr[i];
+        };
+
+        return squares;
     },
 
     findAllOccurrences : function(arr, target) {

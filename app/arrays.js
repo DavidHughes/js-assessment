@@ -78,10 +78,14 @@ define(function() {
     },
 
     count : function(arr, item) {
-        var total = arr.length;
-        var withoutItem = this.remove(arr, item).length;
+        var record = 0;
+        for (var i = arr.length - 1; i >= 0; i--) {
+            if (arr[i] === item) {
+                record++;
+            }
+        }
 
-        return total - withoutItem;
+        return record;
     },
 
     duplicates : function(arr) {

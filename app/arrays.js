@@ -22,7 +22,11 @@ define(function() {
     },
 
     remove : function(arr, item) {
+        while (this.indexOf(arr, item) !== -1) {
+            arr.splice(this.indexOf(arr, item), 1);
+        }
 
+        return arr;
     },
 
     removeWithoutCopy : function(arr, item) {

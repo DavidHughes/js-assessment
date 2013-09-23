@@ -33,7 +33,9 @@ define(function() {
     },
 
     partial : function(fn, str1, str2) {
-
+        return function(suffix) {
+            return fn(str1, str2, suffix);
+        };
     },
 
     useArguments : function() {

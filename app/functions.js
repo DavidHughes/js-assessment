@@ -39,11 +39,19 @@ define(function() {
     },
 
     useArguments : function() {
-
+        var sum = 0;
+        for (var i = arguments.length - 1; i >= 0; i--) {
+            sum = sum +  arguments[i];
+        }
+        return sum;
     },
 
     callIt : function(fn) {
-
+        var args = [];
+        for (var i = 1; i < arguments.length; i++) {
+            args.push(arguments[i]);
+        }
+        return this.argsAsArray(fn, args);
     },
 
     partialUsingArguments : function(fn) {

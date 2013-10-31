@@ -23,11 +23,6 @@ define(function() {
         var phonePattern = /^\d{3}-\d{3}-\d{4}$/;
         return phonePattern.test(str);
     },
-    /*
-        subThousandGroup = [1-9][0-9]{0,2}
-        inThousandGroup = ,[0-9]{3}
-        | 0
-     */
     isUSD : function(str) {
         var USDPattern = /^\$(([1-9]\d{0,2})([,]\d{3})*|[0])(\.\d{2})?$/
         return USDPattern.test(str);

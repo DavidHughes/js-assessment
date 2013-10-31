@@ -11,7 +11,7 @@ define(function() {
     },
 
     endsWithVowel : function(str) {
-
+        return (/[aeiou]$/i).test(str);
     },
 
     captureThreeNumbers : function(str) {

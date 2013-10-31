@@ -20,7 +20,8 @@ define(function() {
     },
 
     matchesPattern : function(str) {
-
+        var phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+        return phonePattern.test(str);
     },
     isUSD : function(str) {
 
